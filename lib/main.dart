@@ -232,3 +232,26 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
           ),
 
           
+          // TAB 3: ElevatedButton + SnackBar
+          Container(
+            color: tabColors[2],
+            child: Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        'Button pressed in ${tabs[2]} tab!',
+                        style: GoogleFonts.montserrat(),
+                      ),
+                    ),
+                  );
+                },
+                child: Text(
+                  'Click me!',
+                  style: GoogleFonts.montserrat(),
+                ),
+              ),
+            ),
+          ),
+
