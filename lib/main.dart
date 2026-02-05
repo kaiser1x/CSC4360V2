@@ -255,3 +255,34 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
             ),
           ),
 
+          // TAB 4: ListView + Card widgets
+          Container(
+            color: tabColors[3],
+            child: ListView(
+              padding: const EdgeInsets.all(12.0),
+              children: [
+                for (final item in listItems)
+                  Card(
+                    child: ListTile(
+                      title: Text(
+                        item['title']!,
+                        style: GoogleFonts.montserrat(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      subtitle: Text(
+                        item['subtitle']!,
+                        style: GoogleFonts.montserrat(),
+                      ),
+                      leading: Icon(Icons.list),
+                      trailing: Icon(Icons.chevron_right),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
